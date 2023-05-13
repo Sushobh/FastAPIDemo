@@ -15,7 +15,9 @@ import os
 load_dotenv()
 
 
-notes_db = NotesDatabase(username=os.environ['POSTGRES_USER'], password=os.environ['POSTGRES_PASSWORD'], host='127.0.0.1', port=5432, database='NotesApp')
+notes_db = NotesDatabase(username=os.environ['POSTGRES_USER'], password=os.environ['POSTGRES_PASSWORD'],
+                         host=os.environ['POSTGRES_HOST'], port=os.environ['POSTGRES_PORT'],
+                         database=os.environ['NOTES_DATABASE_NAME'])
 notes_db.connect()
 notes_repo = NotesRepo(db=notes_db)
 notes_controller = NotesController(notes_repo=notes_repo)
