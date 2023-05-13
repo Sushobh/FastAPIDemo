@@ -1,2 +1,2 @@
 # FastAPIDemo
-A demo server app using Python's Fast API
+A Demo Notes using Python's FastAPI
